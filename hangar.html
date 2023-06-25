@@ -7,21 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/slike/favicon.ico">
+    
 
 </head>
 <body>
     
-
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="slike/logo.png"/></a>
+        <a class="navbar-brand" href="index.html"><img src="slike/logo.png" id="logoh"/></a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav text-white align-items-center">
             <li class="nav-item active">
               <a class="nav-link text-white" href="index.html">Home</a>
@@ -39,13 +39,48 @@
               <a class="nav-link text-white" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="contact.html">Author</a>
+              <a class="nav-link text-white" href="author.html">Author</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-primary text-white" id="login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <div class="hero">
   <div class="container border">
@@ -98,49 +133,66 @@
 </div>
 
 <div class="hero d-flex" id="dir_column">
-
   <div id="b787" class="container d-flex align-items-center">
-    <img class="hangar_pic" src="slike/hangara.png"/>
-    <p>The <span style="font-weight: bold">Boeing 787</span>, also known as the Dreamliner, is a state-of-the-art commercial aircraft renowned for its fuel efficiency and passenger comfort. It features an advanced aerodynamic design and lightweight composite materials that contribute to its impressive fuel savings and reduced emissions. The Dreamliner offers passengers larger windows, improved cabin pressurization, and enhanced in-flight experience, making it a preferred choice for long-haul flights. With its range capabilities and eco-friendly features, the Boeing 787 has revolutionized the aviation industry and set new standards for modern aircraft.</p>
-  </div>
-  
-  <hr class="my-4">
-  
-  <div id="b747" class="container d-flex align-items-center">
-    <p>The <span style="font-weight: bold">Boeing 747</span>, often referred to as the "Queen of the Skies," is an iconic commercial aircraft that has left a lasting impact on the aviation industry. With its distinctive hump and spacious interior, the 747 has been a symbol of luxury and long-haul travel since its introduction. It has a large seating capacity and remarkable cargo capacity, making it versatile for both passenger and freight operations. Over the years, the 747 has undergone advancements in technology and design, offering enhanced efficiency and comfort to passengers. Its long-range capabilities and enduring legacy have solidified the Boeing 747 as one of the most recognizable and celebrated aircraft in history.</p>
-    <img class="hangar_pic" src="slike/hangarb.png"/>
-  </div>
-  
-  <hr class="my-4">
-  
-  <div id="atr" class="container d-flex align-items-center">
-    <img class="hangar_pic" src="slike/hangarc.png"/>
-    <p>The <span style="font-weight: bold">ATR 72-500</span> is a popular regional turboprop aircraft known for its efficiency and reliability. It is widely used by airlines for short-haul flights, connecting smaller airports and regional destinations. The ATR 72-500 offers a comfortable cabin environment with spacious seating and overhead storage. With its advanced avionics and economical operations, the aircraft delivers cost-effective performance and low fuel consumption. Its versatility and capability to operate in various weather conditions have made the ATR 72-500 a preferred choice for regional airlines worldwide.</p>
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6 text-center">
+        <img class="hangar_pic img-fluid mx-auto" src="slike/hangara.png" alt="Boeing 787">
+      </div>
+      <div class="col-md-6">
+        <p>The <span style="font-weight: bold">Boeing 787</span>, also known as the Dreamliner, is a state-of-the-art commercial aircraft renowned for its fuel efficiency and passenger comfort. It features an advanced aerodynamic design and lightweight composite materials that contribute to its impressive fuel savings and reduced emissions. The Dreamliner offers passengers larger windows, improved cabin pressurization, and enhanced in-flight experience, making it a preferred choice for long-haul flights. With its range capabilities and eco-friendly features, the Boeing 787 has revolutionized the aviation industry and set new standards for modern aircraft.</p>
+      </div>
+    </div>
   </div>
 
+  <hr class="my-4">
+
+  <div id="b747" class="container d-flex align-items-center">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6 order-md-first text-center">
+        <img class="hangar_pic img-fluid mx-auto" src="slike/hangarb.png" alt="Boeing 747">
+      </div>
+      <div class="col-md-6 order-md-first">
+        <p>The <span style="font-weight: bold">Boeing 747</span>, often referred to as the "Queen of the Skies," is an iconic commercial aircraft that has left a lasting impact on the aviation industry. With its distinctive hump and spacious interior, the 747 has been a symbol of luxury and long-haul travel since its introduction. It has a large seating capacity and remarkable cargo capacity, making it versatile for both passenger and freight operations. Over the years, the 747 has undergone advancements in technology and design, offering enhanced efficiency and comfort to passengers. Its long-range capabilities and enduring legacy have solidified the Boeing 747 as one of the most recognizable and celebrated aircraft in history.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <div id="atr" class="container d-flex align-items-center">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6 text-center">
+        <img class="hangar_pic img-fluid mx-auto" src="slike/hangarc.png" alt="ATR 72-500">
+      </div>
+      <div class="col-md-6">
+        <p>The <span style="font-weight: bold">ATR 72-500</span> is a popular regional turboprop aircraft known for its efficiency and reliability. It is widely used by airlines for short-haul flights, connecting smaller airports and regional destinations. The ATR 72-500 offers a comfortable cabin environment with spacious seating and overhead storage. With its advanced avionics and economical operations, the aircraft delivers cost-effective performance and low fuel consumption. Its versatility and capability to operate in various weather conditions have made the ATR 72-500 a preferred choice for regional airlines worldwide.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-  <!-- footer -->
 
+  <!-- footer -->
   <footer class="bg-dark text-light">
     <div class="container py-4">
       <div class="row">
         <div class="col-md-4">
           <h5>About</h5>
-          <p>About text goes here...</p>
+          <p>Founded in 1973 by aviation enthusiasts, Aviatia has grown to become a leading aerospace company, offering a comprehensive range of services including aircraft maintenance, charter flights, pilot training, and aviation consulting. With a strong commitment to excellence and customer satisfaction, Aviatia continues to uphold its reputation as a trusted partner in the aviation industry.</p>
         </div>
         <div class="col-md-4">
           <h5>Address</h5>
-          <p>Address text goes here...</p>
+          <p>Zdravka Čelara 16, Beograd</p>
         </div>
         <div class="col-md-4">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="hangar.html">Hangar</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="author.html">Author</a></li>
           </ul>
         </div>
       </div>
@@ -148,15 +200,16 @@
     <hr class="m-0">
     <div class="container py-3 d-flex justify-content-between align-items-center">
       <p class="m-0">Copyright &copy; 2023</p>
-      <div>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="social-icons">
+        <a href="#"><i class="zmdi zmdi-instagram icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-facebook icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-twitter icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-email icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-phone icon-lg"></i></a>
       </div>
     </div>
   </footer>
-  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js%22%3E"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   </body>

@@ -41,6 +41,10 @@ header {
   margin: 0 auto;
 }
 
+#login {
+  cursor: pointer;
+  margin-left: 30px;
+}
 
 .cntnrs {
   color: white;
@@ -50,6 +54,10 @@ header {
 
   i {
     font-size: 35px;
+  }
+
+  p {
+    padding: 5px;
   }
 
 }
@@ -90,6 +98,10 @@ footer {
     }
   }
 
+}
+
+.container {
+  padding-top: 20px;
 }
 
 .content_img:hover div{
@@ -152,11 +164,39 @@ footer {
   background-color: blue;
 }
 
+section {
+  padding: 20px 0px 20px 0px;
+}
+
+.social-icons i {
+  transition: 0.3s;
+  padding: 0 10px;
+  color: white;
+  font-size: 24px;
+}
+
+.social-icons i:hover {
+  color: rgb(0, 68, 255);
+}
+
+
 // - - - - - - Responsive - - - - - -
 
 
 
 
+
+@media (max-width:768px) {
+  #logoh {
+    scale: 80%;
+  }
+}
+
+@media (max-width:992px) {
+  #login {
+    margin-left: 0px;
+  }
+}
 
 
 

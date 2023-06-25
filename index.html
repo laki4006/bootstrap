@@ -8,43 +8,81 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/slike/favicon.ico">
     
 
 </head>
 <body>
     
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="slike/logo.png"/></a>
-      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav text-white align-items-center">
-          <li class="nav-item active">
-            <a class="nav-link text-white" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="hangar.html">Hangar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.html">Author</a>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="slike/logo.png" id="logoh"/></a>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-white align-items-center">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="hangar.html">Hangar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="author.html">Author</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-primary text-white" id="login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Log In</button>
+        </div>
       </div>
     </div>
-  </nav>
-</header>
+  </div>
+
+
   <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -58,25 +96,23 @@
         <div class="carousel-caption top-0 mt-4">
           <p class="mt-5 fs-3 text-uppercase">Reach new heights with us.</p>
           <h1 class="display-1 fw-bolder text-capitalize">Aviatia</h1>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a flight</button>
+          <a href="services.html" class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a flight</a>
         </div>
       </div>
       <div class="carousel-item c-item">
         <img src="slike/plane2.jpg" class="d-block w-100 c-img" alt="Slide 2">
         <div class="carousel-caption top-0 mt-4">
-          <p class="text-uppercase fs-3 mt-5">The season has arrived</p>
-          <p class="display-1 fw-bolder text-capitalize">3 available tours</p>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-            data-bs-target="#booking-modal">Book a flight</button>
+          <p class="text-uppercase fs-3 mt-5">Unforgettable Air Journeys</p>
+          <p class="display-1 fw-bolder text-capitalize">travel safely</p>
+          <a href="services.html" class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a flight</a>
         </div>
       </div>
       <div class="carousel-item c-item">
         <img src="slike/plane3.jpg" class="d-block w-100 c-img" alt="Slide 3">
         <div class="carousel-caption top-0 mt-4">
-          <p class="text-uppercase fs-3 mt-5">Destination activities</p>
-          <p class="display-1 fw-bolder text-capitalize">Go glacier hiking</p>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-            data-bs-target="#booking-modal">Book a flight</button>
+          <p class="text-uppercase fs-3 mt-5">Discover Our Flight Options</p>
+          <p class="display-1 fw-bolder text-capitalize">Vast choices</p>
+          <a href="services.html" class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a flight</a>
         </div>
       </div>
     </div>
@@ -91,25 +127,56 @@
   </div>
   
 
+
   <div class="cntnrs">
-    <div class="square bg-primary">
+    <div class="square bg-primary align-items-center">
       <i class="zmdi zmdi-star-outline"></i>
       <h3>Reliability</h3>
-      <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde doloribus, vitae rerum odio tempore iusto totam quia illo ex animi nostrum cupiditate laboriosam at voluptate expedita assumenda aliquam harum asperiores?</p>
+      <p class="text-center">Aviatia Airlines has established itself as a reliable air company with a proven track record of safety and customer satisfaction. Their stringent maintenance protocols, experienced crew, and commitment to passenger well-being ensure a smooth and secure travel experience.</p>
     </div>
-    <div class="square bg-primary">
+    <div class="square bg-primary align-items-center">
       <i class="zmdi zmdi-airplane"></i>
       <h3>Comfort</h3>
-      <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde doloribus, vitae rerum odio tempore iusto totam quia illo ex animi nostrum cupiditate laboriosam at voluptate expedita assumenda aliquam harum asperiores?</p>
+      <p class="text-center">Aviatia Airlines prioritizes passenger comfort, providing spacious and well-appointed cabins. With plush seating, ample legroom, and attentive in-flight service, travelers can relax and enjoy their journey. The airline's commitment to ensuring a comfortable and enjoyable experience sets them apart.</p>
     </div>
-    <div class="square bg-primary">
+    <div class="square bg-primary align-items-center">
       <i class="zmdi zmdi-money"></i>
       <h3>Economical</h3>
-      <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde doloribus, vitae rerum odio tempore iusto totam quia illo ex animi nostrum cupiditate laboriosam at voluptate expedita assumenda aliquam harum asperiores?</p>
+      <p class="text-center">Aviatia Airlines offers affordable air travel without compromising quality. With competitive fares and various pricing options, passengers can choose the best value for their budget.</p>
     </div>
   </div>
 
+  <hr>
 
+  <div class="container">
+    <h2 class="text-center">Experiences</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="card" margin-bottom="10px">
+          <div class="card-body">
+            <h5 class="card-title">Stellar Solutions Ltd.</h5>
+            <p class="card-text">"Aviatia Airlines delivered a remarkable travel experience with their impeccable service, comfortable cabins, and friendly staff."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Harmony Technologies Inc.</h5>
+            <p class="card-text">"I was thoroughly impressed with Aviatia's commitment to safety, punctuality, and top-notch amenities on board. A truly harmonious journey."</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Serene Services Co.</h5>
+            <p class="card-text">"Aviatia Airlines provided a serene and relaxing flight, with attentive crew members, smooth operations, and a seamless travel experience."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <!-- Footer -->
@@ -128,11 +195,12 @@
       <div class="col-md-4">
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-          <li><a href="#">Link 5</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="hangar.html">Hangar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="author.html">Author</a></li>
         </ul>
       </div>
     </div>
@@ -140,10 +208,12 @@
   <hr class="m-0">
   <div class="container py-3 d-flex justify-content-between align-items-center">
     <p class="m-0">Copyright &copy; 2023</p>
-    <div>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+    <div class="social-icons">
+      <a href="#"><i class="zmdi zmdi-instagram icon-lg"></i></a>
+      <a href="#"><i class="zmdi zmdi-facebook icon-lg"></i></a>
+      <a href="#"><i class="zmdi zmdi-twitter icon-lg"></i></a>
+      <a href="#"><i class="zmdi zmdi-email icon-lg"></i></a>
+      <a href="#"><i class="zmdi zmdi-phone icon-lg"></i></a>
     </div>
   </div>
 </footer>

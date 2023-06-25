@@ -7,21 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/slike/favicon.ico">
+    
 
 </head>
 <body>
     
-
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="slike/logo.png"/></a>
+        <a class="navbar-brand" href="index.html"><img src="slike/logo.png" id="logoh"/></a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav text-white align-items-center">
             <li class="nav-item active">
               <a class="nav-link text-white" href="index.html">Home</a>
@@ -39,13 +39,48 @@
               <a class="nav-link text-white" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="contact.html">Author</a>
+              <a class="nav-link text-white" href="author.html">Author</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-primary text-white" id="login" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="hero" id="fluid d-flex">
     <div class="container">
@@ -75,6 +110,28 @@
       </form>
     </div>
   </div>
+  <hr>
+  <section class="repair-section d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="section-title">Aircraft Repair Service</h2>
+          <p class="section-description">At Aviatia, we offer comprehensive aircraft repair services to ensure the safety and optimal performance of your aircraft. Our highly skilled technicians and state-of-the-art facilities allow us to handle a wide range of repairs, from minor maintenance tasks to major structural repairs.</p>
+          <ul class="repair-list">
+            <li>Engine repairs and maintenance</li>
+            <li>Avionics troubleshooting and upgrades</li>
+            <li>Airframe repairs and inspections</li>
+            <li>Component replacements and repairs</li>
+            <li>Sheet metal repairs and fabrication</li>
+          </ul>
+          <p class="section-description">We prioritize quality workmanship, strict adherence to industry standards, and timely completion of repairs to minimize downtime for your aircraft. Trust us to deliver reliable and efficient repair solutions for all your aviation needs.</p>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <img src="slike/repair.jpg" alt="Aircraft Repair" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
   
 
   <!-- footer -->
@@ -84,20 +141,21 @@
       <div class="row">
         <div class="col-md-4">
           <h5>About</h5>
-          <p>About text goes here...</p>
+          <p>Founded in 1973 by aviation enthusiasts, Aviatia has grown to become a leading aerospace company, offering a comprehensive range of services including aircraft maintenance, charter flights, pilot training, and aviation consulting. With a strong commitment to excellence and customer satisfaction, Aviatia continues to uphold its reputation as a trusted partner in the aviation industry.</p>
         </div>
         <div class="col-md-4">
           <h5>Address</h5>
-          <p>Address text goes here...</p>
+          <p>Zdravka Čelara 16, Beograd</p>
         </div>
         <div class="col-md-4">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="hangar.html">Hangar</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="author.html">Author</a></li>
           </ul>
         </div>
       </div>
@@ -105,15 +163,16 @@
     <hr class="m-0">
     <div class="container py-3 d-flex justify-content-between align-items-center">
       <p class="m-0">Copyright &copy; 2023</p>
-      <div>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="social-icons">
+        <a href="#"><i class="zmdi zmdi-instagram icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-facebook icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-twitter icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-email icon-lg"></i></a>
+        <a href="#"><i class="zmdi zmdi-phone icon-lg"></i></a>
       </div>
     </div>
   </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js%22%3E"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   </body>
