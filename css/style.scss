@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Main";
+  src: url('../fonts/shippori/ShipporiMincho-Regular.ttf');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Main";
+}
+
+header { 
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-item {
+  color: white;
+}
+
+
+.list-inline-item {
+  transition: 0.3s;
+  font-size: 20px;
+  padding: 0px 10px 0px 10px;
+}
+
+.c-item {
+  height: 480px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.hero {
+  display: flex;
+  padding: 20px 0px 20px 0px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.cntnrs {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  i {
+    font-size: 35px;
+  }
+
+}
+
+#fluid {
+  flex-wrap: wrap;
+}
+
+
+.square {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  background-color: #695555;
+  margin: 15px;
+}
+
+
+
+
+footer {
+
+  p {
+    color: rgb(99, 99, 99);
+    font-size: 14px;
+  }
+
+  ul {
+    li{
+
+    color: rgb(99, 99, 99);
+
+     a{
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+
+.content_img:hover div{
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.7; 
+}
+
+
+.square-container {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.square-container .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hangar_pic {
+  height: 300px;
+  width: 300px;
+  margin: 0px 20px 0px 20px;
+}
+
+#dir_column {
+  flex-direction: column;
+}
+
+
+#background-image {
+  background-image: url('../slike/author.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkbox {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+#test {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+}
+
+// - - - - - - Responsive - - - - - -
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=style.scss.map */
